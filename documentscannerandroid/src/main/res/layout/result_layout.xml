@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/original"
+            style="?buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableTop="@drawable/ic_image"
+            android:text="Original"
+            android:textColor="@android:color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/magicColor"
+            style="?buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableTop="@drawable/ic_enhamce_image"
+            android:singleLine="true"
+            android:text="Magic"
+            android:textColor="@android:color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/grayMode"
+            style="?buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableTop="@drawable/ic_gray"
+            android:singleLine="true"
+            android:text="Gray"
+            android:textColor="@android:color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/BWMode"
+            style="?buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableTop="@drawable/ic_black_and_white"
+            android:singleLine="true"
+            android:text="B and W"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/doneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/scanPadding">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rotateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="0dp"
+            android:text="@string/rotate"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/scanPadding"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="0dp"
+            android:text="@string/ok"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/doneLayout"
+        android:layout_below="@id/topBar"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/scanPadding">
+
+        <ImageView
+            android:id="@+id/scannedImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/scanPadding" />
+    </FrameLayout>
+
+
+</RelativeLayout>
