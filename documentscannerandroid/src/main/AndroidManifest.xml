@@ -19,7 +19,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="@string/scan_lib_content_provider"
+            android:authorities="${applicationId}.PhotoFileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
