@@ -191,7 +191,7 @@ public class PickImageFragment extends Fragment {
         Uri tempFileUri;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             tempFileUri = FileProvider.getUriForFile(requireActivity().getApplicationContext(),
-                    requireContext().getString(R.string.scan_lib_content_provider), // As defined in Manifest
+                    requireContext().getPackageName()+".ScanFileProvider", // As defined in Manifest
                     file);
         } else {
             tempFileUri = Uri.fromFile(file);
