@@ -47,12 +47,12 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-// Creates a Maven publication called "release".
+// Creates a Maven publication called "release" with ./gradlew --info publishToMavenLocal
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.rmitos'
                 artifactId = 'documentscannerandroid'
-                version = '1.0.5'
+                version = '1.0.6'
             }
         }
     }

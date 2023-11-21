@@ -87,7 +87,7 @@ public class ScanFragment extends Fragment {
         Uri uri = getUri();
         try {
             Bitmap bitmap = Utils.getBitmap(requireActivity(), uri);
-            requireActivity().getContentResolver().delete(uri, null, null);
+            //requireActivity().getContentResolver().delete(uri, null, null);
             return bitmap;
         } catch (IOException e) {
             e.printStackTrace();
